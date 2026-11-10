@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050713" />
+  <title>Solar System 3D Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loading">INITIALIZING SOLAR SYSTEM…</div>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">✦</span><div><strong>ORBITAL</strong><small>3D SOLAR SYSTEM EXPLORER</small></div></div>
+      <div class="top-actions"><span class="live-dot"></span><span>LIVE SIMULATION</span></div>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">A JOURNEY THROUGH OUR COSMIC NEIGHBOURHOOD</p>
+      <h1>THE <span>SOLAR SYSTEM</span></h1>
+      <p class="sub">Explore the planets. Discover their worlds. Control your own cosmic journey.</p>
+    </section>
+
+    <section class="stage-wrap">
+      <div id="scene" aria-label="Interactive 3D solar system. Drag to rotate and scroll to zoom."></div>
+      <div class="scene-hint">DRAG TO ROTATE <b>·</b> SCROLL TO ZOOM <b>·</b> TAP A PLANET</div>
+      <div class="scene-controls">
+        <button id="pauseBtn" class="control-btn">Ⅱ &nbsp; PAUSE</button>
+        <button id="resetBtn" class="control-btn">↺ &nbsp; RESET VIEW</button>
+      </div>
+      <div class="speed-control"><label for="speed">ORBIT SPEED <span id="speedValue">1.0×</span></label><input id="speed" type="range" min="0" max="3" step="0.1" value="1"></div>
+    </section>
+
+    <section class="info-grid">
+      <article class="planet-info">
+        <div class="info-kicker">PLANET DATABASE</div>
+        <div class="planet-heading"><span id="planetSymbol">☀</span><div><h2 id="planetName">The Sun</h2><p id="planetType">THE STAR AT OUR CENTRE</p></div></div>
+        <p id="planetDesc">Our solar system’s star. Its gravity holds the planets in orbit and its light makes life on Earth possible.</p>
+        <div class="facts"><div><small>DIAMETER</small><strong id="planetDiameter">1,392,700 km</strong></div><div><small>DAY LENGTH</small><strong id="planetDay">~27 Earth days</strong></div><div><small>MOONS</small><strong id="planetMoons">—</strong></div></div>
+      </article>
+      <aside class="planet-list">
+        <div class="info-kicker">SELECT A WORLD</div>
+        <div id="planetButtons" class="planet-buttons"></div>
+      </aside>
+    </section>
+    <footer><span>ORBITAL / INTERACTIVE EXPERIENCE</span><span>MADE FOR THE CURIOUS <b>✦</b></span></footer>
+  </main>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
